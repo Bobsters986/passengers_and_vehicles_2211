@@ -51,6 +51,8 @@ RSpec.describe Park do
       park.add_vehicle(sedan)
       park.add_vehicle(truck)
 
+      # park.charge
+
       expect(park.list_adult_passengers).to eq([charlie, jude])
       expect(park.charge_adult_passengers).to eq(40)
     end

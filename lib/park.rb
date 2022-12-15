@@ -20,20 +20,20 @@ class Park
       vehicle.passengers
     end.flatten
   end
-
-  def charge(admission)
-      @revenue += admission
-  end
-
+  
   def list_adult_passengers
     list_all_passengers.select do |passenger|
       passenger.adult? == true
     end
   end
 
+  def charge
+      @revenue += admission
+  end
+
   def charge_adult_passengers
     list_adult_passengers.map do |adult|
-      adult.charge(admission)
+      adult.charge
     end
   end
 
