@@ -26,7 +26,7 @@ class Vehicle
 
   def num_adults
     @passengers.select do |passenger|
-      passenger.adult? == true
+      passenger.adult?
     end.count
   end
 end
